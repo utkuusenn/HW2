@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="alert" id="alertBox">
+        Giriş Başarılı. Hoş Geldiniz!
+    </div>
+    <header>
+        <nav>
+            <div>
+                <ul class="nav-item">
+                    <li class="nav-link"><a href="./index.html">Anasayfa</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="nav-item">
+                    <li class="nav-link"><a href="./signin.html">Giriş</a></li>
+                    <li class="nav-link"><a href="./register.html">Kayıt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        window.onload = function() {
+            if (localStorage.getItem('showAlert') === 'true') {
+                document.getElementById('alertBox').style.display = 'block';
+                localStorage.removeItem('showAlert');
+            }
+        };
+    </script>
+</body>
+</html>

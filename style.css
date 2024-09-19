@@ -1,0 +1,71 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: #00695c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.nav-item {
+    display: flex;
+    gap: 12px;
+    list-style-type: none;
+    margin-right: 4px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #ffeb3b;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link a:hover {
+    color: #ffeb3b;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert {
+    width: 100%;
+    padding: 14px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.hobbies {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 6px 20px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: hotpink;
+    border: 1px solid hotpink;
+}

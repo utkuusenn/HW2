@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul class="nav-item">
+                    <li class="nav-link"><a href="./index.html">Anasayfa</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="nav-item">
+                    <li class="nav-link"><a href="./signin.html">Giriş</a></li>
+                    <li class="nav-link"><a href="./register.html">Kayıt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <form id="myForm" action="./signin.html" method="GET" onsubmit="setWarning()">
+        <fieldset>
+            <legend>Kayıt Formu</legend>
+            <div>
+                <label for="name">Ad ve Soyad:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">E-posta Adresi:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Telefon Numarası:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <label for="password">Şifre:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <label for="confirm_password">Şifreyi Tekrar Girin:</label><br>
+                <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+                <label>Cinsiyet:</label><br>
+                <input type="radio" id="male" name="gender" value="Erkek" required>
+                <label for="male">Erkek</label><br>
+                <input type="radio" id="female" name="gender" value="Kadın" required>
+                <label for="female">Kadın</label><br>
+                <input type="radio" id="no_specify" name="gender" value="Belirtmek İstemiyorum" required>
+                <label for="no_specify">Belirtmek İstemiyorum</label><br><br>
+
+                <label for="country">Ülke:</label><br>
+                <select id="country" name="country" required>
+                    <option value="">Ülke seçiniz</option>
+                    <option value="Türkiye">Türkiye</option>
+                    <option value="Tayland">Tayland</option>
+                    <option value="Japonya">Japonya</option>
+                    <option value="ABD">ABD</option>
+                    <option value="İngiltere">İngiltere</option>
+                    <option value="İspanya">İspanya</option>
+                </select><br><br>
+
+                <label for="city">Şehir:</label><br>
+                <input type="text" id="city" name="city" required><br><br>
+
+                <label for="postal_code">Posta Kodu:</label><br>
+                <input type="number" id="postal_code" name="postal_code" required><br><br>
+
+                <label for="address">Adres Detayları:</label><br>
+                <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+
+                <label for="birthdate">Doğum Tarihi:</label><br>
+                <input type="date" id="birthdate" name="birthdate"><br><br>
+
+                <label>Hobiler:</label><br>
+                <div class="hobbies">
+                    <div>
+                        <input type="checkbox" id="hobby_sport" name="hobbies" value="Spor">
+                        <label for="hobby_sport">Spor</label><br>
+                        <input type="checkbox" id="hobby_music" name="hobbies" value="Müzik">
+                        <label for="hobby_music">Müzik</label><br>
+                        <input type="checkbox" id="hobby_travel" name="hobbies" value="Seyahat">
+                        <label for="hobby_travel">Seyahat</label><br>
+                        <input type="checkbox" id="hobby_reading" name="hobbies" value="Kitap Okuma">
+                        <label for="hobby_reading">Kitap Okuma</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hobby_watching" name="hobbies" value="Televizyon İzleme">
+                        <label for="hobby_watching">Televizyon İzleme</label><br>
+                        <input type="checkbox" id="hobby_cinema" name="hobbies" value="Sinemaya Gitme">
+                        <label for="hobby_cinema">Sinemaya Gitme</label><br>
+                        <input type="checkbox" id="hobby_climbing" name="hobbies" value="Dağa Tırmanma">
+                        <label for="hobby_climbing">Dağa Tırmanma</label><br>
+                        <input type="checkbox" id="hobby_swimming" name="hobbies" value="Yüzme">
+                        <label for="hobby_swimming">Yüzme</label><br><br>
+                    </div>
+                </div>
+
+                <input class="btn" type="submit" value="Gönder">
+            </div>
+        </fieldset>
+    </form>
+
+
+    <script>
+        function setWarning() {
+            localStorage.setItem('showAlert', 'true');
+        }
+    </script>
+</body>
+
+</html>
